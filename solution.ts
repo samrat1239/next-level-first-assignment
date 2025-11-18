@@ -109,7 +109,7 @@ const getUniqueValues = (array1: number[], array2: number[]): number[] => {
                 break;
             }
         }
-        if (!found) result[result.length] = arr1[i];
+        if (!found) result[result.length] = array1[i];
     }
 
     for (let i = 0; i < array2.length; i++) {
