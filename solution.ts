@@ -97,6 +97,36 @@ type Product = {
     discount?: number;
 }
 
+
+const getUniqueValues = (array1: number[], array2: number[]): number[] => {
+    const result: number[] = [];
+
+    for (let i = 0; i < array1.length; i++) {
+        let found = false;
+        for (let j = 0; j < result.length; j++) {
+            if (result[j] === array1[i]) {
+                found = true;
+                break;
+            }
+        }
+        if (!found) result[result.length] = arr1[i];
+    }
+
+    for (let i = 0; i < array2.length; i++) {
+        let found = false;
+        for (let j = 0; j < result.length; j++) {
+            if (result[j] === array2[i]) {
+                found = true;
+                break;
+            }
+        }
+        if (!found) result[result.length] = array2[i];
+    }
+
+    return result;
+};
+
+
 const calculateTotalPrice = (products: Product[]): number => {
     if (products.length === 0) return 0;
 
